@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import MainCard from "./Component/MainCard";
+import { data } from "./data";
 
-function App() {
+export default function App() {
+  let dataShow = data.map((e, ind) => (
+    <MainCard
+      key={ind}
+      image={e.image}
+      name={e.name}
+      title={e.title}
+      web={e.web}
+      about={e.about}
+      inter={e.interstes}
+    />
+  ));
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <h1>Owners :</h1>
+      <div className="main-app-card container">{dataShow}</div>
+    </>
   );
 }
-
-export default App;

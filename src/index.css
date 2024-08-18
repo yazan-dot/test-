@@ -1,13 +1,120 @@
-body {
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+}
+body {
+  background-color: #23252c;
+  font-family: "Inter", sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Small */
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+.my-image {
+  width: 317px;
+  height: 317px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: white;
+  background-position-y: 0px;
+  position: relative;
+  overflow: hidden;
+}
+.my-image::before {
+  content: "";
+  position: absolute;
+  width: 52px;
+  height: 22px;
+  background-color: white;
+  top: 9px;
+  left: 79%;
+}
+.main-app-card {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+h1 {
+  font-size: 25px;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 35px;
+  color: white;
+}
+.title {
+  color: #f3bf99;
+  text-align: center;
+  margin-top: 8px;
+  font-size: 18px;
+}
+.web {
+  color: white;
+  text-align: center;
+  margin-top: 5px;
+  font-size: 12px;
+}
+.social {
+  text-align: center;
+  margin-top: 20px;
+}
+.social button {
+  border: none;
+  padding: 10px 20px;
+  margin-right: 20px;
+  border-radius: 7px;
+}
+.social button:nth-child(2) {
+  background-color: #5093e2;
+  color: white;
+}
+h2 {
+  margin-top: 25px;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: white;
+}
+.para {
+  color: white;
+  font-size: 13px;
+  line-height: 1.5;
+}
+.footer {
+  background-color: #161619;
+}
+.link {
+  background-color: #918e9b;
+  border-radius: 5px;
+  font-size: 20px;
+  padding: 7px;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding: 10px 49px;
 }
